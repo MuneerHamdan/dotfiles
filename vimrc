@@ -28,6 +28,7 @@ call plug#begin('~/.config/vim/plugged')
 "colorscheme
 Plug 'EdenEast/nightfox.nvim'
 
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
 "vim-sensible
 "Plug 'tpope/vim-sensible'
