@@ -1,11 +1,19 @@
 # dotfiles
 
-These are a collection of my dotfiles that I use on my Arch Linux system. 
+Personal configuration files used for my Linux desktop environment.
 
-- .Xmodmap:
-    * for my arch setup on my macbook pro 2019
-* .gitconfig
-* .tmux.conf
-* .xinitrc
-* vimrc:
-    + my vim/neovim/nvim setup
+## Environment
+- Arch Linux
+- i3 window manager
+- Vim/Neovim
+- tmux
+- Bash
+
+## Includes
+- i3 window manager configuration
+- Vim configuration
+- tmux configuration
+- X11 settings
+- Git configuration
+
+These configurations are used for my daily Linux workflow and productivity setup.
