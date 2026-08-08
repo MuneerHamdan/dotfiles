@@ -24,6 +24,7 @@ endif
 " List your plugins here
 call plug#begin('~/.config/vim/plugged')
 
+Plug 'hedyhli/outline.nvim'
 
 "colorscheme
 Plug 'EdenEast/nightfox.nvim'
@@ -65,10 +66,10 @@ nnoremap ` :NERDTreeToggle<CR>
 "Plug 'liuchengxu/vim-which-key'
 "set timeoutlen=500
 "nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
-
+Plug 'neovim/nvim-lspconfig'
 call plug#end()
-
-
+lua require("outline").setup()
+lua require('lspconfig').pyright.setup({})
 
 "autocmd FileType nerdtree map <buffer> <CR> <CR>:NERDTreeClose<CR>
 let g:NERDTreeQuitOnOpen=1
