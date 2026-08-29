@@ -8,6 +8,9 @@ set whichwrap=h,l
 set cursorline
 "set mouse=n
 set hlsearch
+set wrap
+set linebreak
+
 
 highlight Visual cterm=reverse
 
@@ -27,7 +30,11 @@ call plug#begin('~/.config/vim/plugged')
 Plug 'hedyhli/outline.nvim'
 
 "colorscheme
-Plug 'EdenEast/nightfox.nvim'
+"Plug 'EdenEast/nightfox.nvim'
+"Plug 'fxn/vim-monochrome'
+Plug 'fcpg/vim-fahrenheit'
+highlight Comment guifg=#FFFFFF gui=italic
+
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
@@ -69,7 +76,8 @@ nnoremap ` :NERDTreeToggle<CR>
 Plug 'neovim/nvim-lspconfig'
 call plug#end()
 lua require("outline").setup()
-lua require('lspconfig').pyright.setup({})
+lua require('lspconfig').pylsp.setup({})
+"vim.lsp.config.pylsp.setup({})
 
 "autocmd FileType nerdtree map <buffer> <CR> <CR>:NERDTreeClose<CR>
 let g:NERDTreeQuitOnOpen=1
@@ -77,10 +85,13 @@ let g:NERDTreeQuitOnOpen=1
 
 
 
-colorscheme carbonfox
-highlight Normal ctermbg=none guibg=#000000
+"colorscheme carbonfox
+"highlight Normal ctermbg=none guibg=#000000
+"colorscheme monochrome
+colorscheme fahrenheit
 
 nnoremap <silent> <leader>w :w<cr>
+nnoremap <silent> <leader>o :Outline<cr>
 
 nnoremap <leader>tn :tabnew 
 nnoremap <silent> <leader>tq :tabclose<cr>
