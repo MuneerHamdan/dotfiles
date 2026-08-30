@@ -33,7 +33,7 @@ Plug 'hedyhli/outline.nvim'
 "Plug 'EdenEast/nightfox.nvim'
 "Plug 'fxn/vim-monochrome'
 Plug 'fcpg/vim-fahrenheit'
-highlight Comment guifg=#FFFFFF gui=italic
+highlight Comment guifg=#FFFFFF
 
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
