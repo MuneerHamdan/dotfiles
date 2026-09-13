@@ -27,6 +27,9 @@ endif
 " List your plugins here
 call plug#begin('~/.config/vim/plugged')
 
+"linter
+Plug 'dense-analysis/ale'
+
 Plug 'hedyhli/outline.nvim'
 
 "colorscheme
