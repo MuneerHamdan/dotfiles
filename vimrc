@@ -76,17 +76,26 @@ nnoremap ` :NERDTreeToggle<CR>
 "Plug 'liuchengxu/vim-which-key'
 "set timeoutlen=500
 "nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
+
+"lsp
 Plug 'neovim/nvim-lspconfig'
 call plug#end()
 lua require("outline").setup()
-lua require('lspconfig').pylsp.setup({})
+"lua require('lspconfig').pylsp.setup({})
 "vim.lsp.config.pylsp.setup({})
+"vim.lsp.config.enable('clangd')
 
 "autocmd FileType nerdtree map <buffer> <CR> <CR>:NERDTreeClose<CR>
 let g:NERDTreeQuitOnOpen=1
 
+"completion
+Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
 
-
+"coc
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 "colorscheme carbonfox
 "highlight Normal ctermbg=none guibg=#000000
@@ -94,7 +103,10 @@ let g:NERDTreeQuitOnOpen=1
 colorscheme fahrenheit
 
 nnoremap <silent> <leader>w :w<cr>
-nnoremap <silent> <leader>o :Outline<cr>
+nnoremap <silent> <Tab> :Outline<cr>
+nnoremap <silent> <leader>n :noh<cr>
 
 nnoremap <leader>tn :tabnew 
 nnoremap <silent> <leader>tq :tabclose<cr>
+
+nnoremap <silent> <leader>an :ALENextWrap<cr>
