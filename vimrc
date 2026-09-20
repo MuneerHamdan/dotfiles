@@ -27,6 +27,15 @@ endif
 " List your plugins here
 call plug#begin('~/.config/vim/plugged')
 
+"debugger
+Plug 'mfussenegger/nvim-dap'
+local dap = require("dap")
+dap.adapters.gdb = {
+  type = "executable",
+  command = "gdb",
+  args = { "--interpreter=dap", "--eval-command", "set print pretty on" }
+}
+
 "linter
 Plug 'dense-analysis/ale'
 
